@@ -3,13 +3,17 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      actionButton("generate_matrix_btn", "Generate Random Pairs"),
-      #textInput("textInput", "Add Participants:"),
-      #actionButton("submitButton", "Submit Participants"),
-      img(src="myImage.jpeg",height=200, width=200)
+      textInput("textInput", "Enter Magic Number:"),
+      actionButton("submitButton", "Submit Number and Generate Pairs"),
+      #actionButton("generate_matrix_btn", "Generate Random Pairs"),
+      img(src="myImage.jpeg",height=200, width=200),
+      verbatimTextOutput("outputText")
+      
     ),
     mainPanel(
       tableOutput("display_matrix")
     )
   )
 )
+
+#rsconnect::deployApp('/Users/aditya/Desktop/SecretSanta')
