@@ -1,6 +1,6 @@
 server <- function(input, output) {
   participants <- c("Elizaveta", "Anna-Mariya", "Monika", "Thoin",
-                    "Enkhee","Elena","Ben","Amit","Aditya")
+                    "Enkhee","Elena","Ben","Amit","Aditya", "Akino")
   # Function to generate a matrix
   ss<-function(participants,min_run_time=NULL){
    # participants <- c("Elizaveta", "Anna-Mariya", "Monika", "Thoin",
@@ -13,9 +13,9 @@ server <- function(input, output) {
       min_run_time<-as.numeric(min_run_time)
     }
     counter=1
-    if(length(participants)%%2!=0){
-      participants<-c("Aditya_2",participants)
-    }
+  #  if(length(participants)%%2!=0){
+   #   participants<-c("Aditya_2",participants)
+  #  }
     
     mat<- cbind(participants,rep(NA,length(participants)))
     colnames(mat)<-c("Sender", "Receiver")
